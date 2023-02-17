@@ -1,6 +1,98 @@
-header {
-    color: #000;
-    background-color: rgb(56, 26, 26);
-    margin-bottom: 30px;
-    font-size: 40px;
+.header {
+    border-bottom: 1px solid #E0E0E0;
+    position: relative;
+
+    &__container {
+        height: 68px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        line-height: 110%;
+        letter-spacing: 0.02em;
+        color: #171717;
+        margin: 0 20px;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            border-bottom: 2px solid #DC1919;
+            padding-bottom: 25px;
+        }
+
+        &.item-active {
+            border-bottom: 2px solid #DC1919;
+            padding-bottom: 25px;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 17px;
+        color: #DC1919;
+        width: 162px;
+        height: 37px;
+        border: 1px solid #DC1919;
+        border-radius: 4px;
+        background-color: #fff;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            border-radius: 20px;
+            color: #fff;
+            background-color: #DC1919;
+        }
+    }
+
+}
+
+.body-header {
+    height: 300px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 69px;
+    left: 0;
+    z-index: 5;
+    padding: 24px 60px;
+    display: none;
+
+    &.active-body-header {
+        display: block;
+    }
+
+    &__nav {
+        display: flex;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-right: 120px;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item {
+        line-height: 144.02%;
+        letter-spacing: 0.01em;
+        color: #171717;
+
+        &-semibold {
+            font-weight: 600;
+            color: #000000;
+        }
+    }
 }

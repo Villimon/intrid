@@ -7,11 +7,187 @@
 })
 
 <body>
-    @@include('html/header.html', {})
-    <main>
-        <h1>Hello World</h1>
-    </main>
-    @@include('html/footer.html', {})
+    <div class="wrapper">
+        @@include('html/header.html', {})
+        <main class="page">
+
+            <section class="banner">
+                <div class="banner__container container">
+                    <div class="banner__header">
+                        <h1 class="banner__title">Сотрудничество
+                            начинается с доверия</h1>
+                        <h3 class="banner__lable">«Траст» входит в состав Российской Гильдии Риэлторов.
+                            Стандарты качества услуг компании сертифицированы,
+                            деятельность застрахована.</h3>
+                    </div>
+                    <div class="banner__filters">
+                        <ul class="banner__apartment">
+                            <li class="banner__item">Квартира в новостройке<span class="banner__arrow _icon-arrow-dawn"
+                                    data-btn="1"></span>
+                                <div class="banner__submenu banner__submenu-apartment" data-menu="1">
+                                    <div class="banner__btns">
+                                        <button class="banner__btn">Жилая</button>
+                                        <button class="banner__btn">Коммерческая</button>
+                                    </div>
+                                    <div class="banner__inputs">
+                                        @@include('html/bannerCheckbox.html', {
+                                        "title":"Квартира в новостройке"
+                                        })
+                                        @@include('html/bannerCheckbox.html', {
+                                        "title":"Квартира во вторичке"
+                                        })
+                                    </div>
+                                    <div class="banner__inputs">
+                                        @@include('html/bannerCheckbox.html', {
+                                        "title":"Комната"
+                                        })
+                                        @@include('html/bannerCheckbox.html', {
+                                        "title":"Доля"
+                                        })
+                                    </div>
+                                    <div class="banner__inputs">
+                                        @@include('html/bannerCheckbox.html', {
+                                        "title":"Дом или дача"
+                                        })
+                                        @@include('html/bannerCheckbox.html', {
+                                        "title":"Часть дома"
+                                        })
+                                        @@include('html/bannerCheckbox.html', {
+                                        "title":"Таунхаус"
+                                        })
+                                        @@include('html/bannerCheckbox.html', {
+                                        "title":"Участок"
+                                        })
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="banner__roominess">
+                            <li class="banner__item">Комнатность<span
+                                    class="banner__arrow banner__arrow-roominess _icon-arrow-dawn" data-btn="2"></span>
+                                <div class="banner__submenu banner__submenu-roominess" data-menu="2">
+                                    <div class="banner__btns">
+                                        <button class=" banner__btn-roominess">1</button>
+                                        <button class=" banner__btn-roominess">2</button>
+                                        <button class=" banner__btn-roominess">3</button>
+                                        <button class=" banner__btn-roominess">4</button>
+                                        <button class=" banner__btn-roominess">5+</button>
+                                    </div>
+                                    <div class="banner__inputs-roominess">
+                                        @@include('html/bannerCheckbox.html', {
+                                        "title":"Студия"
+                                        })
+                                        @@include('html/bannerCheckbox.html', {
+                                        "title":"Свободная планировка"
+                                        })
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="banner__input-number">
+                            <span id="result"></span>
+                            <div class="banner__body">
+                                <div class="banner__block">
+                                    <input type="number" class="banner__price" placeholder="от">
+                                    <span>₽</span>
+                                </div>
+                                <div class="banner__block">
+                                    <input type="number" class="banner__price banner__price-2" placeholder="до">
+                                    <span>₽</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner__search">
+                            <input class="banner__input-text" placeholder="Район">
+                            <button class="banner__btn-search">Поиск</button>
+                            <div class="banner__search-body search-banner">
+                                <h4 class="search-banner__title">Адрес</h4>
+                                <p class="search-banner__text">Железнодорожников, 7, Картымский</p>
+                                <p class="search-banner__text"> Железнодорожная, 21, Винзили</p>
+                                <p class="search-banner__text">Железнодорожников, 3, Картымский</p>
+                                <p class="search-banner__text">Железнодорожников, 4, Картымский</p>
+                                <p class="search-banner__text">Железнодорожников, 4, Картымский</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner__items items-banner">
+                        <div class="items-banner__flex">
+                            @@include('html/itemsBanner.html', {
+                            "title":"Ипотека онлайн",
+                            "text":"Поможем получить одобрение банков, чтобы вы могли",
+                            "img":"./img/img-1.png",
+                            "class":"items-banner__body-red",
+                            })
+                            @@include('html/itemsBanner.html', {
+                            "title":"Поменяем на новую",
+                            "text":"Поможем получить одобрение банков, чтобы вы могли",
+                            "img":"./img/img-2.png",
+                            "class":"items-banner__body-black",
+                            })
+                            @@include('html/itemsBanner.html', {
+                            "title":"Оценка стоимости",
+                            "text":"Поможем получить одобрение банков, чтобы вы могли",
+                            "img":"./img/img-3.png",
+                            "class":"items-banner__body-blue",
+                            })
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slider">
+                <div class="slider__container container">
+                    <div class="slider__header">
+                        <div class="slider__info">
+                            <h2 class="slider__title">Эксклюзивные варианты</h2>
+                            <h3 class="slider__lable">
+                                В данном случае я выступаю в роли Морфеуса — лишь указываю на
+                                дверь,войти придётся самостоятельно.
+                            </h3>
+                        </div>
+                        <a href="#" class="slider__btn">Все эксклюзивы</a>
+                    </div>
+                    <div class="slider-swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="swiper__image">
+                                    <img src="./img/slider-img.svg" alt="">
+                                </div>
+                                <div class="swiper__body">
+                                    <h3 class="swiper__action">Кухня в подарок</h3>
+                                    <div class="swiper__bottom">
+                                        <div class="swiper__left">
+                                            <div class="swiper__price">13 750 000 ₽</div>
+                                            <div class="swiper__info">3-к квартира, 57м2, 12/15 эт.</div>
+                                            <div class="swiper__address">
+                                                Коминтерновский район, Московский проспект,114</div>
+                                        </div>
+                                        <div class="swiper__right">
+                                            <button class="swiper__like"></button>
+                                            <a href="#" class="swiper__btn">Показать номер</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__image">
+                                    <img src="./img/slider-img.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__image">
+                                    <img src="./img/slider-img.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('html/footer.html', {})
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
 </body>
 

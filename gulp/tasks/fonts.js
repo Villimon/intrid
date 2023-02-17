@@ -29,10 +29,10 @@ export const ttfToWoff = () => {
             formats: ['woff'],
 
         }))
-        .pipe(app.gulp.dest(`${app.path.fonts}`))
+        .pipe(app.gulp.dest(`${app.path.build.fonts}`))
         .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`))
         .pipe(ttf2woff2())
-        .pipe(app.gulp.dest(`${app.path.fonts}`));
+        .pipe(app.gulp.dest(`${app.path.build.fonts}`));
 
 }
 export const fontsStyle = () => {
